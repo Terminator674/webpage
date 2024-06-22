@@ -1,0 +1,347 @@
+
+/* Common transitions */
+.transition {
+    transition: transform 0.3s ease;
+}
+
+/* CSS for content boxes */
+.content-boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px; /* Adjust margin to create space */
+}
+
+.content-box {
+    height: 180px;
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h3 {
+    margin-bottom: 10px;
+}
+
+.content-box p {
+    color: #333;
+}
+
+.content-box:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-20px);
+}
+
+/* CSS for image container */
+.image-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px; /* Add margin to create space */
+    
+
+}
+
+/* CSS for image box */
+.image-box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+}
+
+.image-box:hover {
+    transition: transform 0.7s ease;
+    transform: translateY(-20px);
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.image-box .image-description {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 50%; /* Adjust width as needed */
+    margin-left: 0; /* Remove any left margin */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Optional: Adjust width for smaller screens */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+/* CSS for settings submenu */
+/* CSS for the submenu */
+.settings-submenu {
+    display: none; /* Hide the submenu by default */
+    position: absolute;
+    background-color: #f0e6f6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    right: 10px;
+    top: 50px; /* Adjust as needed */
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.settings-submenu.show {
+    display: block; /* Show the submenu when the .show class is added */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.settings-submenu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.settings-submenu a:hover {
+    background-color: #a02323;
+    color: #fff;
+}
+
+/* CSS for title bar */
+.settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.settings:hover {
+    transform: rotate(90deg);
+    color: #ffcc00;
+}
+
+
+.title-bar {
+    background-color: #72706f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.title-bar2 {
+    background-color: #72706f;
+    color: #fff;
+    padding: 30px;
+    text-align:start;
+}
+
+/* CSS for footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #030110;
+    color: #fff;
+    text-align: center; /* Center align text */
+    padding: 10px;
+}
+
+/* CSS for body */
+body {
+    background-color: #a4a1a1;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+/* CSS for content */
+.content {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+/* CSS for links */
+a {
+    color: #230bb9; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #00b30c; /* Change color on hover */
+}
+
+header {
+    background-color: #72706f;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#form-container {
+    text-align: center;
+    margin-bottom: 50px; /* Add margin to create space */
+}
+
+#contact-form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(60, 98, 246, 0.1);
+}
+
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    
+    width: 500px;
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* CSS for button */
+.click-button {
+    background-color: #230bb9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.click-button:hover {
+    background-color: #5900b3;
+    
+}
+
+.image-container2 {
+     
+    top: 0; /* Adjust as needed */
+    left: 0; /* Align to the left side */
+    padding: 20px; /* Add padding for spacing */
+    
+}
+
+.image-container2 img {
+    max-width: 100px; /* Decrease the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+}
+
+
+
+/* #particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: block;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    clip-path: polygon(50% 0%, 0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw - 50%), calc(100vh - 50%)) scale(0);
+        opacity: 0;
+    }
+} */
+
+
+.content.transition {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin-bottom to create space */
+}
+
+.content.transition h2 {
+    text-align: center;
+}
+
+.content-boxes-1.transition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30vh; /* Optional: Adjust based on your layout needs */
+}
